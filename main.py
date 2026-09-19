@@ -102,3 +102,5 @@ Digite o menu desejado: """
             print("Opção Inválida")
 
         menu_escolhido = int(input(menu))
+
+    print("\n\nObrigado por usar nosso sistema!\n\n")
