@@ -39,8 +39,6 @@ def conectar():
 # Cria a função responsável pelo cadastro de clientes
 def cadastrar_cliente():
 
-    # Pede para o usuário informar o nome do cliente
-    # O input() sempre retorna o que foi digitado como texto
     nome = input("Digite o nome do cliente: ")
 
     cnpj = input("Digite o CNPJ: ")
@@ -95,8 +93,6 @@ def cadastrar_cliente():
     # Sem o commit(), o INSERT pode não ser gravado definitivamente
     conexao.commit()
 
-
-    # Mostra uma mensagem informando que o cadastro foi realizado
     print("Cliente cadastrado com sucesso!")
 
 
@@ -162,12 +158,9 @@ def formatar_telefone(telefone):
 # Cria a função responsável por consultar os clientes
 def consultar_clientes():
 
-    # Abre uma conexão com o banco
     conexao = conectar()
 
-    # Cria um cursor para executar comandos SQL
     cursor = conexao.cursor()
-
 
     # Cria o comando SQL para buscar os clientes
     sql = """
@@ -186,15 +179,12 @@ def consultar_clientes():
     # Executa o comando SELECT
     cursor.execute(sql)
 
-
     # Pega todos os registros encontrados pelo SELECT
     # fetchall() retorna todos os resultados
     clientes = cursor.fetchall()
 
-
     # Mostra um título no terminal
     print("\n========== CLIENTES ==========")
-
 
     # Percorre todos os clientes encontrados
     # Cada cliente será armazenado temporariamente na variável cliente
@@ -402,30 +392,22 @@ def menu():
     # O menu continuará aparecendo até o usuário escolher 0
     while True:
 
-        # Mostra o título do menu
         print("\n========== MENU ==========")
 
-        # Mostra a opção de cadastro
         print("1 - Cadastrar cliente")
 
-        # Mostra a opção de consulta
         print("2 - Consultar clientes")
 
-        # Mostra a opção de edição
         print("3 - Editar cliente")
 
-        # Mostra a opção de exclusão
         print("4 - Apagar cliente")
 
-        # Mostra a opção para sair
         print("0 - Sair")
 
 
-        # Pede para o usuário escolher uma opção
         opcao = input("Digite uma opção: ")
 
 
-        # Verifica se o usuário escolheu 1
         if opcao == "1":
 
             # Chama a função de cadastrar cliente
