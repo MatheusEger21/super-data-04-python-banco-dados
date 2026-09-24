@@ -48,3 +48,13 @@ UPDATE produtos
 -- READ        SELECT
 -- UPDATE      UPDATE
 -- DELETE      DELETE
+
+
+CREATE TABLE fornecedores(
+    id int primary key AUTO_INCREMENT,
+    cnpj varchar(18) not null,
+    razao_social varchar(100) not null,
+    nome_fantasia varchar(100) not null,
+    cep varchar(10) not null,
+    numero varchar(10)
+);

@@ -105,8 +105,38 @@ def editar_tickets():
     print("Produto alterado com sucesso")
 
 
+def limpar_terminal():
+    import os
+    os.system("cls")
+
 if __name__ == "__main__":
-    editar_tickets()
+    menu = """MENU:
+1   - Cadastrar Ticket
+2   - Consultar Ticket
+3   - Editar Ticket
+4   - Apagar Ticket
+99  - Sair
+
+Digite o menu desejado: """
+
+    menu_escolhido = int(input(menu))
+
+    while menu_escolhido != 99:
+        limpar_terminal()
+        if menu_escolhido == 1:
+            cadastrar_tickets()
+        elif menu_escolhido == 2:
+            consultar_tickets()
+        elif menu_escolhido == 3:
+            editar_tickets()
+        elif menu_escolhido == 4:
+            apagar_tickets()
+        else:
+            print("Opção Inválida")
+
+        menu_escolhido = int(input(menu))
+
+    print("\n\nObrigado por usar nosso sistema!\n\n")
 
 
 
