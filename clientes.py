@@ -1,4 +1,4 @@
-```python
+
 from banco_dados import conectar
 
 
