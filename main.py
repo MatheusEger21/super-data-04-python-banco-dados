@@ -1,3 +1,5 @@
+from clientes import apagar_cliente, cadastrar_cliente, consultar_clientes, editar_cliente
+from fornecedores import cadastrar_fornecedor, consultar_fornecedores
 from produtos import apagar_produto, cadastrar_produtos, consultar_produtos, editar_produto
 
 
@@ -11,6 +13,12 @@ if __name__ == "__main__":
 2   - Cadastrar Produtos
 3   - Apagar Produto
 4   - Editar produto
+5   - Consultar Clientes
+6   - Cadastrar Clientes
+7   - Apagar Clientes
+8   - Editar Clientes
+9   - Consultar fornecedores
+10  - Cadastrar fornecedor
 99  - Sair
 
 Digite o menu desejado: """
@@ -27,6 +35,18 @@ Digite o menu desejado: """
             apagar_produto()
         elif menu_escolhido == 4:
             editar_produto()
+        elif menu_escolhido == 5:
+            consultar_clientes()
+        elif menu_escolhido == 6:
+            cadastrar_cliente()
+        elif menu_escolhido == 7:
+            apagar_cliente()
+        elif menu_escolhido == 8:
+            editar_cliente()    
+        elif menu_escolhido == 9:
+            consultar_fornecedores()   
+        elif menu_escolhido == 10:
+            cadastrar_fornecedor()               
         else:
             print("Opção Inválida")
 

@@ -1,0 +1,12 @@
+# requerements.txt tem todas as dependencias do projeto
+# https://pypi.org centralizador de bibliotecas
+
+# pip install rich
+# pip install rich==15.0.0
+
+# Instalar todas as dependecias do requirements.txt
+# pip install -r requirements.txt
+
+
+rich==15.0.0
+requests==2.34.2

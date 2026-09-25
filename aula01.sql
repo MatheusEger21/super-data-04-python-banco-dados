@@ -58,3 +58,8 @@ CREATE TABLE fornecedores(
     cep varchar(10) not null,
     numero varchar(10)
 );
+
+ALTER TABLE produtos 
+ADD COLUMN id_fornecedor INT,
+ADD CONSTRAINT produtos_fornecedor_fk
+FOREIGN KEY (id_fornecedor) REFERENCES fornecedores(id);
