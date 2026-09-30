@@ -1,3 +1,4 @@
+import questionary
 from rich.console import Console
 from rich.table import Table
 from requests import get
@@ -93,7 +94,13 @@ def formatar_cnpj(cnpj):
     return cnpj_formatado
 
 
-
-
-# cadastrar_fornecedor()
-consultar_fornecedores()
+def menu():
+        menus = ["Consultar", "Cadastrar", "Voltar"]
+        opcao_desejada = ""
+        while opcao_desejada != "Voltar":
+            opcao_desejada = questionary.select("Submenu de Clientes", choices=menus).ask()
+        if opcao_desejada == "Consultar":
+            consultar_fornecedores()
+        elif opcao_desejada == "Cadastrar":
+            cadastrar_fornecedor()
+    

@@ -10,3 +10,4 @@
 
 rich==15.0.0
 requests==2.34.2
+questionary==2.1.1

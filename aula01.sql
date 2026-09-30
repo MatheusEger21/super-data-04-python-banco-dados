@@ -63,3 +63,25 @@ ALTER TABLE produtos
 ADD COLUMN id_fornecedor INT,
 ADD CONSTRAINT produtos_fornecedor_fk
 FOREIGN KEY (id_fornecedor) REFERENCES fornecedores(id);
+
+
+CREATE TABLE pedidos(
+    id int primary key AUTO_INCREMENT,
+    total DECIMAL(10,2) NOT NULL,
+    data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP
+
+);
+
+
+CREATE TABLE itens_pedidos(
+    id int primary key AUTO_INCREMENT,
+    id_produto int not null,
+    id_pedido int not null,
+    valor DECIMAL(10,2),
+    quantidade INT,
+
+    FOREIGN KEY (id_produto) REFERENCES produtos(id),
+    FOREIGN KEY (id_pedido) REFERENCES pedidos(id)
+);
+
+ALTER TABLE pedidos ADD COLUMN status VARCHAR(12) NOT NULL;
